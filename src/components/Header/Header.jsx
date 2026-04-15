@@ -1,9 +1,11 @@
+import ButtonTechStore from './Navigation/ButtonTechStore'
+import styles from './Header.module.css'
+import Navigation from './Navigation/Navigation'
+
 const Header = () => {
   return (
-    <header className="header">
-      <div>
-        <h1 className="logo">Ecommerce</h1>
-      </div>
+    <header className={styles.header}>
+        <Navigation />
     </header>
   )
 }
