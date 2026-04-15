@@ -1,0 +1,34 @@
+.sidebar {
+    /* Позиционирование */
+    position: absolute;
+    top: 97px;
+    left: 279.5px;
+
+    /* Размеры и модель коробки */
+    width: 256px;
+    height: 316px;
+    box-sizing: border-box;
+
+    /* Внутренние отступы */
+    padding: 17px 17px 1px 17px;
+    /* top right bottom left */
+
+    /* Flex для работы gap */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    /* Внешние границы и скругление */
+    border: 1px solid #cccccc;
+    /* border-width: 1px */
+    border-radius: 10px;
+
+    /* Фон и прозрачность */
+    background: #ffffff;
+    opacity: 1;
+
+    /* Дополнительные свойства из макета */
+    transform: rotate(0deg);
+    overflow: hidden;
+    /* чтобы содержимое не выходило за скруглённые углы */
+}
