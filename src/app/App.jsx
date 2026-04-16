@@ -7,7 +7,6 @@ const App = () => {
     <>
       <Header />
       <Home />
-      <Sidebar />
     </>
 
   )
