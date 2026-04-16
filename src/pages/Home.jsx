@@ -1,11 +1,14 @@
-import Header from "../components/Header/Header"
-import Sidebar from "../components/Sidebar/Sidebar"
+import styles from './Home.module.css'
 
 const Home = () => {
   return (
     <>
-      <Header />
-      <Sidebar />
+      <div className={styles.container_home}>
+        
+      </div>
+      <footer className={styles.container_footer}>
+        
+      </footer>
     </>
   )
 }

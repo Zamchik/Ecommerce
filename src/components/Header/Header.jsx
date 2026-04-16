@@ -1,4 +1,3 @@
-import ButtonTechStore from './Navigation/ButtonTechStore'
 import styles from './Header.module.css'
 import Navigation from './Navigation/Navigation'
 

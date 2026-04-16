@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "checkJs": true,
+    "checkJs": true, //Отключаю и включаю проверку типов. Потом спросить про проблему с event
     "jsx": "react-jsx",
     "moduleResolution": "bundler"
   },

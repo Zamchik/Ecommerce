@@ -10,15 +10,18 @@ const Brand = () => {
     a.localeCompare(b),
   // Почитать про Set, Map и localeCompare
   );
-
+  /**
+ * @param {React.ChangeEvent<HTMLSelectElement>} event
+ */
+  // Спросить про ошибку с event
   const handleChange = (event) => {
     setSelectedBrand(event.target.value);
     console.log("Выбран бренд:", event.target.value);
   };
 
   return (
-    <>
-      <div className={styles.label}>Brand</div>
+    <div className={styles.container_brand}>
+      <label className={styles.label_brand}>Brand</label>
       <select
         id="brand"
         value={selectedBrand}
@@ -32,7 +35,7 @@ const Brand = () => {
           </option>
         ))}
       </select>
-    </>
+    </div>
   );
 };
 
