@@ -5,3 +5,19 @@
     height: 1022px;
     gap: 24px;
 }
+
+.container_productCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.container_productSort {
+    width: 1096px;
+    height: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

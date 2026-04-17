@@ -1,6 +1,7 @@
-.container_productSort {
-    width: 1096px;
+.select {
+    width: 222px;
     height: 42px;
-    display: flex;
-    justify-content: space-between;
+    opacity: 1;
+    border-radius: 10px;
+    border-width: 1px;
 }
