@@ -1,0 +1,8 @@
+.container_shopContent {
+    display: flex;
+    flex-direction: row;
+    width: 1440px;
+    height: 1086px;
+    gap: 24px;
+    padding: 32px;
+}

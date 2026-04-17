@@ -1,0 +1,6 @@
+.container_productSort {
+    width: 1096px;
+    height: 42px;
+    display: flex;
+    justify-content: space-between;
+}

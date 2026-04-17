@@ -3,8 +3,8 @@
     flex-direction: column;
     width: 256px;
     height: 1022px;
-    padding-top: 24px;
-    /* padding-top: 332px; */
+    /* padding-top: 24px;
+    padding-top: 332px; */
     gap: 16px;
 }
 
@@ -29,7 +29,6 @@
     flex-direction: column;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-style: Medium;
     font-size: 20px;
     line-height: 30px;
     letter-spacing: 0px;
@@ -52,7 +51,6 @@
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-style: Medium;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0px;

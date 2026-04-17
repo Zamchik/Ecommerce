@@ -1,0 +1,7 @@
+.container_productCatalog {
+    display: flex;
+    flex-direction: column;
+    width: 1096px;
+    height: 1022px;
+    gap: 24px;
+}
