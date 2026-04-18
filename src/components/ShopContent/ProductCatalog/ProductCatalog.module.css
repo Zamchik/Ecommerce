@@ -1,11 +1,11 @@
 .container_productCatalog {
     display: flex;
     flex-direction: column;
-    flex: 1;                     /* Занимает всё доступное пространство по ширине */
-    min-height: 0;               /* Позволяет сжиматься во flex-контейнере */
-    width: 100%;                 /* Растягивается на ширину родителя */
+    flex: 1;
+    min-height: 0;
+    width: 100%;
     gap: 24px;
-    overflow-y: auto;            /* Скролл внутри каталога, если товаров много */
+    overflow-y: auto;
 }
 
 .container_productCard {
@@ -14,15 +14,16 @@
     gap: 24px;
     justify-items: center;
     padding: 20px;
-    flex: 1;                     /* Занимает оставшееся место в колонке */
-    align-content: start;  
+    flex: 1;
+    align-content: start;
 }
 
 .container_productSort {
-    width: 100%;                 /* Адаптивная ширина */
-    min-height: 42px;            /* Минимальная высота вместо фиксированной */
+    width: 100%;
+    min-height: 42px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 0 46px;
 }

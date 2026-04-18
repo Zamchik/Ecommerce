@@ -1,28 +1,48 @@
-import styles from './Navigation.module.css'
-import CartIcon from '../assets/Cart.png'
-import ProfileIcon from '../assets/Profile.png'
-import ButtonTechStore from './ButtonTechStore'
+import styles from "./Navigation.module.css";
+import CartIcon from "../assets/Cart.png";
+import ProfileIcon from "../assets/Profile.png";
 
-const Navigation = () => {
-    return (
-        <nav className={styles.container_header}>
-            <div className={styles.navigation_left}>
-                <ButtonTechStore />
-                <a className={styles.tv}>TV</a>
-                <a className={styles.phone}>Phone</a>
-                <a className={styles.laptop}>Laptop</a>
-            </div>
-            <div className={styles.navigation_right}>
-                <button className={styles.button}>
-                <img src={CartIcon} alt='cart' />
-            </button>
-            <button className={styles.button}>
-                <img src={ProfileIcon} alt='profile' />
-            </button>
-            </div>
-        </nav>
+const Navigation = ({ activeTab, onTabChange }) => {
+  const handleTabClick = (tab) => {
+    onTabChange(tab);
+  };
 
-    )
-}
+  return (
+    <nav className={styles.container_header}>
+      <div className={styles.navigation_left}>
+        <a href="/tv" className={styles.logoLink}>
+          <span className={styles.techstore}>TechStore</span>
+        </a>
+        <button
+          className={`${styles.tab} ${activeTab === "tv" ? styles.active : ""}`}
+          onClick={() => handleTabClick("tv")}
+        >
+          TV
+        </button>
+        <button
+          className={`${styles.tab} ${activeTab === "phone" ? styles.active : ""}`}
+          onClick={() => handleTabClick("phone")}
+        >
+          Phone
+        </button>
+        <button
+          className={`${styles.tab} ${activeTab === "laptop" ? styles.active : ""}`}
+          onClick={() => handleTabClick("laptop")}
+        >
+          Laptop
+        </button>
+      </div>
 
-export default Navigation
+      <div className={styles.navigation_right}>
+        <button className={styles.iconButton}>
+          <img src={CartIcon} alt="cart" />
+        </button>
+        <button className={styles.iconButton}>
+          <img src={ProfileIcon} alt="profile" />
+        </button>
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;

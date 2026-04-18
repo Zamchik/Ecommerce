@@ -1,9 +1,5 @@
 {
   "compilerOptions": {
-    "checkJs": true, //Отключаю и включаю проверку типов. Потом спросить про проблему с event
-    "jsx": "react-jsx",
-    "moduleResolution": "bundler"
+    "module": "es2015"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
 }
