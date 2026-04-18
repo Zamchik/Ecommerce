@@ -3,55 +3,66 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;           /* разрешаем перенос на узких экранах */
     width: 100%;
-    /* max-width: 1440px; */
-    height: 64px;
-    padding-right: 32px;
-    padding-left: 32px;
+    min-height: 64px;          /* минимальная высота */
+    padding-right: 24px;       /* адаптивные отступы */
+    padding-left: 24px;
+    gap: 16px;                 /* зазор между блоками при переносе */
 }
 
 .navigation_left {
     display: flex;
     align-items: center;
     flex-direction: row;
-    width: 166.78px;
-    height: 24px;
-    gap: 24px;
+    flex-wrap: wrap;           /* разрешаем перенос ссылок */
+    gap: 16px 24px;            /* вертикальный и горизонтальный gap */
+    /* убираем фиксированную ширину и высоту */
 }
+
 .navigation_right {
     display: flex;
     align-items: center;
     flex-direction: row;
-    width: 88px;
-    height: 36px;
-    gap: 24px;
+    gap: 16px;
+    /* убираем фиксированную ширину и высоту */
 }
 
-.tv {
+.tv,
+.phone,
+.laptop {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 0px;
     text-align: center;
+    white-space: nowrap;       /* предотвращаем перенос текста внутри ссылок */
 }
 
-.phone, .laptop {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0px;
-    text-align: center;
+.phone,
+.laptop {
     color: #717182;
 }
 
 .button {
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  display: inline-flex;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: inline-flex;
+}
+
+@media (max-width: 600px) {
+    .container_header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 16px;
+    }
+    
+    .navigation_left,
+    .navigation_right {
+        width: 100%;
+        justify-content: space-between;
+    }
 }

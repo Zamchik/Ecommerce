@@ -7,7 +7,9 @@ const Home = () => {
   return (
     <div className={styles.container_home}>
       <Header />
-      <ShopContent />
+      <main>
+        <ShopContent />
+      </main>
       <Footer />
     </div>
   );

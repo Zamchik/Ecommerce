@@ -1,23 +1,28 @@
 .container_productCatalog {
     display: flex;
     flex-direction: column;
-    width: 1096px;
-    height: 1022px;
+    flex: 1;                     /* Занимает всё доступное пространство по ширине */
+    min-height: 0;               /* Позволяет сжиматься во flex-контейнере */
+    width: 100%;                 /* Растягивается на ширину родителя */
     gap: 24px;
+    overflow-y: auto;            /* Скролл внутри каталога, если товаров много */
 }
 
 .container_productCard {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 24px;
     justify-items: center;
     padding: 20px;
+    flex: 1;                     /* Занимает оставшееся место в колонке */
+    align-content: start;  
 }
 
 .container_productSort {
-    width: 1096px;
-    height: 42px;
+    width: 100%;                 /* Адаптивная ширина */
+    min-height: 42px;            /* Минимальная высота вместо фиксированной */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; 
 }

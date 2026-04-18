@@ -1,78 +1,59 @@
-import styles from './Footer.module.css'
+import { useState } from "react";
+import styles from "./Footer.module.css";
 
-const Footer = () => {
+function Footer() {
+  const [subscribeChange, setSubscribeChange] = useState("");
 
-  const supportLinks = ['FAQ', 'Shipping', 'Returns', 'Contact'];
-  const legalLinks = ['Privacy Policy', 'Terms of Service'];
+  // @ts-ignore
+  const handlerSubscribeChange = (event) => {
+    setSubscribeChange(event.target.value);
+  };
 
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footer_container}>
-        <div className={styles.footer_columns}>
-          {/* Колонка About */}
-          <div className={styles.footer_columns}>
-            <h3 className={styles.footer_title}>About</h3>
-            <p className="footer-about-text">
-              TechStore – your premier destination for cutting-edge electronics and gadgets.
-              We offer quality products, expert advice, and exceptional customer service.
-            </p>
-          </div>
-
-          {/* Колонка Support */}
-          <div className={styles.footer_columns}>
-            <h3 className={styles.footer_title}>Support</h3>
-            <ul className={styles.footer_links}>
-              {supportLinks.map((link) => (
-                <li key={link}>
-                  <a href="#" className={styles.footer_link}>
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Колонка Legal */}
-          <div className={styles.footer_columns}>
-            <h3 className={styles.footer_title}>Legal</h3>
-            <ul className={styles.footer_links}>
-              {legalLinks.map((link) => (
-                <li key={link}>
-                  <a href="#"  className={styles.footer_link}>
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Колонка Newsletter */}
-          <div className={styles.footer_columns}>
-            <h3 className={styles.footer_title}>Newsletter</h3>
-            <form className={styles.footer_newsletter_form} >
+    <footer className={styles.container_footer_and_copyright}>
+      <div className={styles.container_footer}>
+        <div className={styles.footer_column}>
+          <div className={styles.footer_header}>About</div>
+          <div className={styles.footer_item}>About Us</div>
+          <div className={styles.footer_item}>Careers</div>
+          <div className={styles.footer_item}>Press</div>
+        </div>
+        <div className={styles.footer_column}>
+          <div className={styles.footer_header}>Support</div>
+          <div className={styles.footer_item}>Contact</div>
+          <div className={styles.footer_item}>FAQ</div>
+          <div className={styles.footer_item}>Shipping</div>
+        </div>
+        <div className={styles.footer_column}>
+          <div className={styles.footer_header}>Legal</div>
+          <div className={styles.footer_item}>Privacy Policy</div>
+          <div className={styles.footer_item}>Terms of Service</div>
+          <div className={styles.footer_item}>Returns</div>
+        </div>
+        <div className={styles.footer_column}>
+          <div className={styles.footer_header}>Newsletter</div>
+          <form className={styles.footer_subscribe_form}>
+            <label>Subscribe for exclusive deals</label>
+            <div className={styles.container_input_subscribe}>
               <input
-                type="email"
-                placeholder="Your email address"
-                className={styles.footer_input}
-                required
+                value={subscribeChange}
+                onChange={handlerSubscribeChange}
+                type="text"
+                className={styles.input_email}
+                placeholder="Enter your email"
               />
-              <button type="submit" className={styles.footer_button}>
+              <button type="button" className={styles.button_newsletter}>
                 Subscribe
               </button>
-            </form>
-            <p className={styles.footer_newsletter_note}>
-              Get special offers and the latest updates.
-            </p>
-          </div>
+            </div>
+          </form>
         </div>
-
-        {/* Копирайт */}
-        <div className={styles.footer_copyright}>
-          <p>© 2026 TechStore. All rights reserved.</p>
-        </div>
+      </div>
+      <div className={styles.container_copyright}>
+        © 2026 TechStore. All rights reserved.
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;
