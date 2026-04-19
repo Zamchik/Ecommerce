@@ -3,8 +3,7 @@ import styles from "./Footer.module.css";
 
 function Footer() {
   const [subscribeChange, setSubscribeChange] = useState("");
-
-  // @ts-ignore
+  
   const handlerSubscribeChange = (event) => {
     setSubscribeChange(event.target.value);
   };

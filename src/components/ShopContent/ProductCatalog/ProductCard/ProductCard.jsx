@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./ProductCard.module.css";
 
-// @ts-ignore
+
 const ProductCard = ({ product }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -20,13 +20,12 @@ const ProductCard = ({ product }) => {
 
   const toggleFavorite = () => setIsFavorite(!isFavorite);
 
-  // @ts-ignore
   const formatPrice = (price) =>
     `$${price.toLocaleString("en-US")}`;
 
   return (
     <div className={styles.product_card}>
-      {/* Блок карусели */}
+      {/* Карусель */}
       <div className={styles.image_carousel}>
         <div className={styles.image_container}>
           <img
@@ -42,7 +41,7 @@ const ProductCard = ({ product }) => {
           <button className={styles.favorite_button} onClick={toggleFavorite}>
             {isFavorite ? "❤️" : "♡"}
           </button>
-          {/* Стрелки */}
+          {/* Стрелки переключатели */}
           {totalImages > 1 && (
             <>
               <button className={styles.carousel_arrow_left} onClick={handlePrevImage}>

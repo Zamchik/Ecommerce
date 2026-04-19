@@ -29,8 +29,8 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
-  width: 200px;
-  height: 27px;
+  width: auto;
+  height: auto;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -39,7 +39,7 @@
 }
 
 .paragraph {
-  width: 200px;
+  width: auto;
   height: auto;
   margin-top: 5px;
   font-family: 'Inter', sans-serif;
@@ -52,7 +52,7 @@
 .offer_expire {
   display: flex;
   flex-direction: row;
-  width: 200px;
+  width: auto;
   height: auto;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -60,10 +60,12 @@
   line-height: 20px;
   letter-spacing: 0px;
   margin-top: 5px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .offer_expire_text {
-  width: 140px;
+  width: auto;
   height: 20px;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -74,12 +76,26 @@
 
 .timer {
   position: relative;
-  top:-5px;
-  width: 75.625px;
+  top: -5px;
+  width: auto;
   height: 28px;
   font-family: Liberation Mono, monospace;
   font-weight: 700;
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0px;
+}
+
+@media (max-width: 639px) {
+  .container {
+    padding: 12px;
+  }
+  .heading {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .timer {
+    font-size: 16px;
+    top: 0;
+  }
 }

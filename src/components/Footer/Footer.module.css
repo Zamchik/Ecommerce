@@ -103,3 +103,12 @@
   cursor: pointer;
   margin: 12px 4px;
 }
+
+@media (max-width: 639px) {
+  .container_footer {
+    flex-direction: column;
+  }
+  .footer_subscribe_form {
+    width: 100%;
+  }
+}

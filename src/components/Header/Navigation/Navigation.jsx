@@ -9,10 +9,11 @@ const Navigation = ({ activeTab, onTabChange }) => {
 
   return (
     <nav className={styles.container_header}>
-      <div className={styles.navigation_left}>
-        <a href="/tv" className={styles.logoLink}>
-          <span className={styles.techstore}>TechStore</span>
-        </a>
+      <a href="/tv" className={styles.logoLink}>
+        <span className={styles.techstore}>TechStore</span>
+      </a>
+
+      <div className={styles.tabs_row}>
         <button
           className={`${styles.tab} ${activeTab === "tv" ? styles.active : ""}`}
           onClick={() => handleTabClick("tv")}

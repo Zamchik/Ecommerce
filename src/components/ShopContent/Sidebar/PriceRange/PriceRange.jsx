@@ -5,12 +5,10 @@ const PriceRange = () => {
   const [minPrice, setMinPrice] = useState("0");
   const [maxPrice, setMaxPrice] = useState("5000");
   
-  // @ts-ignore
   const handlerMinChange = (event) => { 
     setMinPrice(event.target.value);
   };
 
-  // @ts-ignore
   const handlerMaxChange = (event) => {
     setMaxPrice(event.target.value);
   };
